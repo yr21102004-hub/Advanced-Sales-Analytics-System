@@ -124,7 +124,7 @@ python "Advanced Sales Analytics.py"
 
 ## 💼 Author
 
-Developed by [Your Name]
+Developed by [Youssef Ramadan]
 
 ---
 
