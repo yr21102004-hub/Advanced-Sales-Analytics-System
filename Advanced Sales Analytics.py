@@ -51,19 +51,23 @@ def sales_by_city(df):
 def plot_bar(df):
    product_sales = df.groupby("product")["total"].sum().reset_index()
    sns.barplot(x="product", y="total", data=product_sales)
+   plt.savefig("Bar Chart.png")
    plt.show()
 def plot_line(df):
    date_sales = df.groupby("date")["total"].sum().reset_index()
    sns.lineplot(x="date", y="total", data =date_sales)
+   plt.savefig("Line Chart.png")
    plt.show()
 def plot_pie(df):
     city_sales = df.groupby("city")["total"].sum()
     plt.pie(city_sales, labels=city_sales.index, autopct='%1.1f%%')
+    plt.savefig("Pie Chart.png")
     plt.show()
 def plot_heatmap(df):
     corr = df[["price", "quantity", "total"]].corr()
     sns.heatmap(corr, annot=True)
     plt.title("Correlation Heatmap")
+    plt.savefig("Heatmap Chart.png")
     plt.show()
 def main():
     file_path = r"E:\Computer Scienes\My Projects\My Teskes\Sales Analysis\Advanced Sales Analytics.csv.txt"
